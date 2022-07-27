@@ -16,7 +16,7 @@ const List = ({data}) => {
 const styles = StyleSheet.create({
     container:{
         borderColor:'black',
-        borderWidth:10,
+        borderWidth:2,
         flex:1,
         justifyContent:'center',
         marginHorizontal:30
