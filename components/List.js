@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, StyleSheet,Text,ScrollView} from 'react-native';
 
-const List = ({data}) => {
+const List = ({data,removeData}) => {
     return (
         <View style={styles.container}>
             <ScrollView>
             {data.map((item)=>{
-                return <Text style={styles.items} key={item.id}>{item.text}</Text>
+                return <Text onPress={()=>removeData(item.id)} style={styles.items} key={item.id}>{item.text}</Text>
             })}
             </ScrollView>
         </View>

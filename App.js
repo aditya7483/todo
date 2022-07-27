@@ -17,12 +17,19 @@ export default function App() {
       return [...prevData,val]
     })
   }
+  const removeData = (val) => {
+    setData((prevData)=>{
+      return prevData.filter((item)=>{
+        return item.id!=val
+      })
+    })
+  }
 
   return (
     <View style={styles.container}>
       <Header/>
       <AddText changeData={changeData}/>
-      <List data={data}/>
+      <List data={data} removeData={removeData}/>
     </View>
   );
 }
